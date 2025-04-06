@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    char estado[10], cidade[10];
+    int pop, pt;
+    float area, pib, ddem;
+
+    printf("Nome do seu estado é:");
+    scanf("%s", &estado);
+    printf("Nome da cidade é:");
+    scanf("%s", &cidade);
+    printf("População da sua cidade: ");
+    scanf("%i", &pop);
+    printf("Área da sua cidade: ");
+    scanf("%f", &area);
+    printf("Produto interno bruto da sua cidade: ");
+    scanf("%f", &pib);
+    printf("Números de pontos turisticos da sua cidade: ");
+    scanf("%i", &pt);
+    printf(".........................\n");
+    ddem = (float)pop / area;
+
+    char estado2[10], cidade2[10];
+    int pop2, pt2;
+    float area2, pib2, ddem2;
+
+    printf("Nome do estado é:");
+    scanf("%s", &estado2);
+    printf("Nome da cidade é:");
+    scanf("%s", &cidade2);
+    printf("População da sua cidade: ");
+    scanf("%i", &pop2);
+    printf("Área da sua cidade: ");
+    scanf("%f", &area2);
+    printf("Produto interno bruto da sua cidade: ");
+    scanf("%f", &pib2);
+    printf("Números de pontos turisticos da sua cidade: ");
+    scanf("%i", &pt2);
+
+    ddem2 = (float)pop2 / area2;
+
+
+    printf(".........................\n");
+    printf("Atributo utilizado (População)\n");
+
+    if (pop > pop2)
+    {
+        printf("População: Carta 1 - %s venceu\n", cidade);
+    }
+    else
+    {
+        printf("População: Carta 2 - %s venceu\n", cidade2);
+    }
+        return 0;
+}
