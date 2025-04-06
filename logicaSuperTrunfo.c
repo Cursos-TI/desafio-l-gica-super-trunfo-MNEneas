@@ -1,43 +1,246 @@
 #include <stdio.h>
+//nivel mestre
+int main()
+{
+    int pop2, pt2;
+    float area2, pib2, ddem2;
+    int pop, pt;
+    float area, pib, ddem;
+    int atributo1, atributo2;
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
+    printf("......SUPER TRUNFO......\n");
+    printf("Escolha o atributo para a comparação:\n");
+    printf(" População(1)\n Área(2)\n PIB(3)\n Pontos turisticos(4)\n Densidade demográfica(5)\n");
+    scanf("%i", &atributo1);
 
-int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+    printf("Carta 1 - Rio de Janeiro\n");
+    printf("População da sua cidade: ");
+    scanf("%i", &pop);
+    printf("Área da sua cidade: ");
+    scanf("%f", &area);
+    printf("Produto interno bruto da sua cidade: ");
+    scanf("%f", &pib);
+    printf("Números de pontos turisticos da sua cidade: ");
+    scanf("%i", &pt);
+    printf(".........................\n");
+    ddem = (float)pop / area;
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    printf("Carta 2 - Manaus\n");
+    printf("População da sua cidade: ");
+    scanf("%i", &pop2);
+    printf("Área da sua cidade: ");
+    scanf("%f", &area2);
+    printf("Produto interno bruto da sua cidade: ");
+    scanf("%f", &pib2);
+    printf("Números de pontos turisticos da sua cidade: ");
+    scanf("%i", &pt2);
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    ddem2 = (float)pop2 / area2;
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    switch (atributo1)
+    {
+    case 1:
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+        printf(".........................\n");
+        printf("Atributo utilizado (População)\n");
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+        if (pop == pop2)
+        {
+            printf("Empate");
+        }
+        else if (pop > pop2)
+        {
+            printf("População: Carta 1 venceu\n");
+        }
+        else
+        {
+            printf("População: Carta 2 venceu\n");
+        }
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+        break;
+    case 2:
+        printf(".........................\n");
+        printf("Atributo utilizado (Área)\n");
 
+        if (area == area2)
+        {
+            printf("Empate");
+        }
+        else if (area > area2)
+        {
+            printf("Area: Carta 1 venceu\n");
+        }
+        else
+        {
+            printf("Area: Carta 2 venceu\n");
+        }
+
+        break;
+    case 3:
+
+        printf(".........................\n");
+        printf("Atributo utilizado (PIB)\n");
+
+        if (pib == pib2)
+        {
+            printf("Empate");
+        }
+        else if (pib > pib2)
+        {
+            printf("PIB: Carta 1 venceu\n");
+        }
+        else
+        {
+            printf("PIB: Carta 2 venceu\n");
+        }
+        break;
+    case 4:
+
+        printf(".........................\n");
+        printf("Atributo utilizado (Pontos turisticos)\n");
+
+        if (pt == pt2)
+        {
+            printf("Empate");
+        }
+        else if (pt > pt2) // pontos turisticos
+        {
+            printf("Pontos turístico: Carta 1 venceu\n");
+        }
+        else
+        {
+            printf("Pontos turisticos: Carta 2 venceu\n");
+        }
+        break;
+    case 5:
+        printf(".........................\n");
+        printf("Atributo utilizado (Densidade demográfica)\n");
+
+        if (ddem == ddem2)
+        {
+            printf("Empate\n");
+        }
+        else if (ddem < ddem2)
+        {
+            printf("Densidade demografica: Carta 1 venceu\n");
+        }
+        else
+        {
+            printf("Densidade demográfica: Carta 2 venceu\n");
+        }
+        break;
+
+    default:
+        printf("Atributo não encontrado");
+        break;
+    }
+
+    printf("Escolha seu segundo atributo para comparar:\n");
+    scanf("%i", &atributo2);
+
+    if (atributo1 == atributo2)
+    {
+        printf("Voce escolheu o mesmo atributo");
+    }
+    else
+    {
+        switch (atributo2)
+        {
+        case 1:
+
+            printf(".........................\n");
+            printf("Atributo utilizado (População)\n");
+
+            if (pop == pop2)
+            {
+                printf("Empate");
+            }
+            else if (pop > pop2)
+            {
+                printf("População: Carta 1 venceu\n");
+            }
+            else
+            {
+                printf("População: Carta 2 venceu\n");
+            }
+
+            break;
+        case 2:
+            printf(".........................\n");
+            printf("Atributo utilizado (Área)\n");
+
+            if (area == area2)
+            {
+                printf("Empate");
+            }
+            else if (area > area2)
+            {
+                printf("Area: Carta 1 venceu\n");
+            }
+            else
+            {
+                printf("Area: Carta 2 venceu\n");
+            }
+
+            break;
+        case 3:
+
+            printf(".........................\n");
+            printf("Atributo utilizado (PIB)\n");
+
+            if (pib == pib2)
+            {
+                printf("Empate");
+            }
+            else if (pib > pib2)
+            {
+                printf("PIB: Carta 1 venceu\n");
+            }
+            else
+            {
+                printf("PIB: Carta 2 venceu\n");
+            }
+            break;
+        case 4:
+
+            printf(".........................\n");
+            printf("Atributo utilizado (Pontos turisticos)\n");
+
+            if (pt == pt2)
+            {
+                printf("Empate");
+            }
+            else if (pt > pt2) // pontos turisticos
+            {
+                printf("Pontos turístico: Carta 1 venceu\n");
+            }
+            else
+            {
+                printf("Pontos turisticos: Carta 2 venceu\n");
+            }
+            break;
+        case 5:
+            printf(".........................\n");
+            printf("Atributo utilizado (Densidade demográfica)\n");
+
+            if (ddem == ddem2)
+            {
+                printf("Empate");
+            }
+            else if (ddem < ddem2)
+            {
+                printf("Densidade demografica: Carta 1 venceu\n");
+            }
+            else
+            {
+                printf("Densidade demográfica: Carta 2 venceu\n");
+            }
+            break;
+
+        default:
+            printf("Atributo não encontrado");
+            break;
+        }
+    }
     return 0;
 }
